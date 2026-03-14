@@ -1,0 +1,6 @@
+Microcontrolador: AZdelivery ESP32 WROOM 32 x1
+Sensores de distancia por ultrasonidos: HC-SR04 x2
+Zumbador piezoeléctrico activo x1
+Breadboards  x2
+Pack de jumper wires
+Pack de resistencias de 4.7 k \(\Omega \)
