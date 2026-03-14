@@ -1,0 +1,702 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 68,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "grafana-mqtt-datasource",
+        "uid": "eejv8bzsc660wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisPlacement": "auto",
+            "fillOpacity": 70,
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 10,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colWidth": 0.9,
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "rowHeight": 0.9,
+        "showValue": "auto",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mqtt-datasource",
+            "uid": "eejv8bzsc660wb"
+          },
+          "refId": "A",
+          "topic": "esp32/silla/distancia/alante"
+        }
+      ],
+      "title": "YDLidar GS2 Alante",
+      "type": "status-history"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mqtt-datasource",
+        "uid": "eejv8bzsc660wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 11,
+        "x": 10,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mqtt-datasource",
+            "uid": "eejv8bzsc660wb"
+          },
+          "refId": "A",
+          "topic": "esp32/silla/distancia/atras"
+        }
+      ],
+      "title": "HC-Sr04 Atras",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "destinationType": "number",
+                "targetField": "msg"
+              }
+            ],
+            "fields": {}
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mqtt-datasource",
+        "uid": "eejv8bzsc660wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 10,
+        "x": 0,
+        "y": 7
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mqtt-datasource",
+            "uid": "eejv8bzsc660wb"
+          },
+          "refId": "A",
+          "topic": "esp32/silla/distancia/alante"
+        }
+      ],
+      "title": "HC-Sr04 Alante (auxiliar)",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "destinationType": "number",
+                "targetField": "msg"
+              }
+            ],
+            "fields": {}
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mqtt-datasource",
+        "uid": "eejv8bzsc660wb"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 11,
+        "x": 10,
+        "y": 7
+      },
+      "id": 4,
+      "options": {
+        "infinitePan": false,
+        "inlineEditing": true,
+        "panZoom": false,
+        "root": {
+          "background": {
+            "color": {
+              "fixed": "transparent"
+            },
+            "image": {
+              "fixed": ""
+            }
+          },
+          "border": {
+            "color": {
+              "fixed": "dark-green"
+            }
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
+          },
+          "elements": [
+            {
+              "actions": [
+                {
+                  "fetch": {
+                    "body": "{\n    \"topic\":\"esp32/silla/movimiento\",\n    \"message\":{\n         \"movimiento\":\"alante\"\n    }\n}",
+                    "headers": [
+                      [
+                        "Content-Type",
+                        "application/json"
+                      ]
+                    ],
+                    "method": "POST",
+                    "queryParams": [],
+                    "url": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento"
+                  },
+                  "oneClick": false,
+                  "title": "on-click-a",
+                  "type": "fetch"
+                }
+              ],
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "api": {
+                  "contentType": "application/json",
+                  "data": "{\n    \"topic\":\"esp32/silla/movimiento\",\n    \"message\":{\n        \"movimiento\":\"alante\"\n    }\n}",
+                  "endpoint": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento",
+                  "headerParams": [
+                    [
+                      "Content-Type",
+                      "application/json"
+                    ]
+                  ],
+                  "method": "POST",
+                  "queryParams": []
+                },
+                "color": {
+                  "fixed": "#F0F4FD"
+                },
+                "size": 14,
+                "style": {
+                  "variant": "primary"
+                },
+                "text": {
+                  "fixed": "Alante",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Alante",
+              "placement": {
+                "height": 45,
+                "left": 250,
+                "top": 40,
+                "width": 150
+              },
+              "type": "button"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "api": {
+                  "contentType": "application/json",
+                  "data": "{\n    \"topic\":\"esp32/silla/movimiento\",\n    \"message\":{\n        \"movimiento\":\"atras\"\n    }\n}",
+                  "endpoint": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento",
+                  "headerParams": [
+                    [
+                      "Content-Type",
+                      "application/json"
+                    ]
+                  ],
+                  "method": "POST",
+                  "queryParams": []
+                },
+                "color": {
+                  "fixed": "#F0F4FD"
+                },
+                "size": 14,
+                "style": {
+                  "variant": "primary"
+                },
+                "text": {
+                  "fixed": "Atras",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Atras",
+              "placement": {
+                "height": 45,
+                "left": 250,
+                "top": 180,
+                "width": 150
+              },
+              "type": "button"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "api": {
+                  "contentType": "application/json",
+                  "data": "{\n    \"topic\":\"esp32/silla/movimiento\",\n    \"message\":{\n        \"movimiento\":\"izquierda\"\n    }\n}",
+                  "endpoint": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento",
+                  "headerParams": [
+                    [
+                      "Content-Type",
+                      "application/json"
+                    ]
+                  ],
+                  "method": "POST",
+                  "queryParams": []
+                },
+                "color": {
+                  "fixed": "#F0F4FD"
+                },
+                "size": 14,
+                "style": {
+                  "variant": "primary"
+                },
+                "text": {
+                  "fixed": "Izquierda",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Izquierda",
+              "placement": {
+                "height": 45,
+                "left": 92,
+                "top": 110,
+                "width": 150
+              },
+              "type": "button"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "api": {
+                  "contentType": "application/json",
+                  "data": "{\n    \"topic\":\"esp32/silla/movimiento\",\n    \"message\":{\n        \"movimiento\":\"derecha\"\n    }\n}",
+                  "endpoint": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento",
+                  "headerParams": [
+                    [
+                      "Content-Type",
+                      "application/json"
+                    ]
+                  ],
+                  "method": "POST",
+                  "queryParams": []
+                },
+                "color": {
+                  "fixed": "#F0F4FD"
+                },
+                "size": 14,
+                "style": {
+                  "variant": "primary"
+                },
+                "text": {
+                  "fixed": "Derecha",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Derecha",
+              "placement": {
+                "height": 45,
+                "left": 408,
+                "top": 110,
+                "width": 150
+              },
+              "type": "button"
+            },
+            {
+              "actions": [
+                {
+                  "confirmation": "",
+                  "fetch": {
+                    "body": "{\n    \"topic\":\"esp32/silla/movimiento\",\n        \"message\":{\n    \"movimiento\":\"parar\"\n    }\n}",
+                    "headers": [
+                      [
+                        "Content-Type",
+                        "application/json"
+                      ]
+                    ],
+                    "method": "POST",
+                    "queryParams": [],
+                    "url": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento"
+                  },
+                  "title": "on-click-p",
+                  "type": "fetch"
+                }
+              ],
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "api": {
+                  "contentType": "application/json",
+                  "data": "{\n    \"topic\":\"esp32/silla/movimiento\",\n    \"message\":{\n        \"movimiento\":\"parar\"\n    }\n}",
+                  "endpoint": "https://flow.iot.etsisi.upm.es/tfg/wheelchair/api/movimiento",
+                  "headerParams": [
+                    [
+                      "Content-Type",
+                      "application/json"
+                    ]
+                  ],
+                  "method": "POST",
+                  "queryParams": []
+                },
+                "color": {
+                  "fixed": "#F0F4FD"
+                },
+                "size": 14,
+                "style": {
+                  "variant": "primary"
+                },
+                "text": {
+                  "fixed": "Parar",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Parar",
+              "placement": {
+                "height": 45,
+                "left": 250,
+                "top": 110,
+                "width": 150
+              },
+              "type": "button"
+            }
+          ],
+          "name": "Element 1760541530902",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "rotation": 0,
+            "top": 0,
+            "width": 100
+          },
+          "type": "frame"
+        },
+        "showAdvancedTypes": true
+      },
+      "pluginVersion": "12.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mqtt-datasource",
+            "uid": "eejv8bzsc660wb"
+          },
+          "refId": "A",
+          "topic": "esp32/silla/movimiento"
+        }
+      ],
+      "title": "Movimiento",
+      "type": "canvas"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 41,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5s",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "silla Copy",
+  "uid": "d7d77e5a-e039-4ef7-982a-95153e3d1f33",
+  "version": 1
+}
