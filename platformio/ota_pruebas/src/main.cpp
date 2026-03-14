@@ -4,8 +4,8 @@
 #include <ESPAsyncWebServer.h>
 #include <ElegantOTA.h>
 
-const char* ssid = "SBC";
-const char* password = "SBCwifi$";
+const char* ssid = "SSID";
+const char* password = "PASS";
 
 AsyncWebServer server(80);
 

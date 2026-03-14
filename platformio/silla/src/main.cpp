@@ -41,11 +41,11 @@ TaskHandle_t task_wifi_mqtt_handle = NULL;
 #define SOUND_SPEED 0.034
 
 //variabes wifi
-const char* ssid = "SBC";
-const char* password = "SBCwifi$";
+const char* ssid = "SSID";
+const char* password = "PASS";
 
 //variables servidor mqtt
-const char* mqtt_server = "iot.etsisi.upm.es"; 
+const char* mqtt_server = "servname"; 
 const int mqtt_port = 1883;
 
 WiFiClient espClient;
